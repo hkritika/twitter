@@ -1,0 +1,201 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="dist/css/bootstrap.css">
+		<script src="dist/js/jquery.min.js"></script>
+		<script src="dist/js/bootstrap.js"></script>
+		
+	</head>
+	<style>
+		#navbar ul li a{
+			
+			color:white;
+		}
+		
+		#footer{
+			display:inline;
+			text-decoration:none;
+		}
+		
+		img{
+			border-radius: 50%;
+			
+		}
+		
+		#navbar ul li a:hover{
+			background-color:#039be5;
+			color:black;
+		}
+		
+		.glyphicon-thumbs-up{
+			color:white;
+		}
+		
+		.active{
+			color:red;
+		}
+	</style>
+	
+	<script>
+	
+		function printtweet()
+		{
+			var valueoftextbox  = [];
+			valueoftextbox=new Array (document.getElementById("tweettext").value.trim());
+			if(valueoftextbox=="")
+			{
+				document.getElementById("tweettext").style.borderColor="red";
+			}
+			else
+				{
+					var data = "";
+				for(var i=0; i<valueoftextbox.length; i++)
+				{
+					data = data + valueoftextbox[i];
+				}
+				document.getElementById("results").innerHTML=data;
+					alert("tweet posted successfull!");
+					save();
+				}
+				
+		}
+		
+		function save()
+			{
+				var name = document.getElementById("tweettext").value;// to pick the value
+				user.push(name);// to add new element at end of javascript array
+				printtweet();// to reload the user count
+				document.getElementById("tweettext").value="";// to clear the textbox
+			}
+			
+		
+	</script><!--js-->
+	<script>
+		$(function(){
+			$("#color").click(function(){
+				$("#color").addClass('active');
+			})
+			
+		});
+	</script><!--jquery-->
+	<body>
+		<nav class="navbar">
+		<div class="container-fluid" id="navbar">
+				
+				<ul class="nav navbar-nav  navbar-fixed-top" style="background-color:#039be5;">
+				  <li class="active"><a href="#"><span class="glyphicon glyphicon-home" style="margin-left:30px;"> Home </span></a></li>
+				  <li><a href="#"><span class="glyphicon glyphicon-bell" style="margin-left:30px;"> Notification</span> </a></li>
+				  <li><a href="#"><span class="glyphicon glyphicon-comment" style="margin-left:30px;"> Message </a></span></li>
+				  <li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+					<span class="glyphicon glyphicon-globe" style="margin-left:30px;"> Moments </span></a>
+					<ul class="dropdown-menu">
+					  <li><a href="#" style="color:skyblue;"> Today </a></li>
+					  <li><a href="#" style="color:skyblue;"> News </a></li>
+					  <li><a href="#" style="color:skyblue;"> Sports </a></li>
+					  <li><a href="#" style="color:skyblue;"> Fun </a></li>
+					  
+					</ul>
+				  </li>
+				  <li><a href="#" style="color:white;font-size:25px;margin-left:60px;"> Twitter </a></li>
+				  <li style="margin-left:300px;"> <a><input type="text" class="form-control" placeholder="Search" name="search" ></a></li>
+				  <li>
+					<button class="btn btn-sm dropdown-toggle" type="button" data-toggle="dropdown" style="background-color:#039be5">
+						  <span class="glyphicon glyphicon-user"style="margin-top:20px;margin-left:20px; color:white;"></span></button>
+						  <ul class="dropdown-menu text-center">
+							<li><a href="profile.html" style="color:skyblue;">Profile</a></li>
+							<li><a href="#" style="color:skyblue;";">List</a></li>
+							<li><a href="#" style="color:skyblue;">Moments</a></li>
+							<hr>
+							<li><a href="#" style="color:skyblue;">Twiter Ads</a></li>
+							<li><a href="#" style="color:skyblue;">Analytics</a></li>
+							<hr>
+							<li><a href="#" style="color:skyblue;">Setting & Privacy</a></li>
+							<li><a href="#" style="color:skyblue;">Help Center</a></li>
+							<li><a href="#" style="color:skyblue;">Keyboard</a></li>
+							<li><a href="#" style="color:skyblue;">Short Cuts</a></li>
+							<li><a href="#" style="color:skyblue;">Log Outs</a></li>
+							<hr>
+							<li><a href="#" style="color:skyblue;">Night Mode</a></li>
+						  </ul>
+				  </li>
+				  <li ><a href="#" data-toggle="modal" data-target="#tweet"><button type="button" class="btn btn-sm"  style="margin-left:35px; background-color:white;color:#039be5;">Tweet</button></a></li>
+				</ul>
+		</div><!--end conntainer-->
+		</nav><!--end nav-->
+		<!--profile-->
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-2" style="border-right:1px solid skyblue;">
+					<div>
+						<img src="default.png">
+					</div>
+					
+					<div style="background-color:white;">
+						<div class="col-sm-6">
+							<h4>Tweets</h4>
+							
+							<h4 style="margin-top:-30px; margin-left:100px;">Following</h4>
+						</div>
+					</div>
+					
+				</div><!--end2-->
+				
+				
+				<div class="col-sm-8">
+					<div id="result">
+					<div class="row">
+					<div class="panel panel-primary" style="border:1px solid skyblue;width:500px;margin-left:250px;">
+						
+						<div class="panel-body" >
+							<h3 id="results"></h3>
+							
+							
+						</div>
+						<div class="panel-footer" id="options" style="background-color:#039be5;">
+							<ul>
+								<button type="button" class="btn btn-sm" style="background-color:#039be5;"><span class="glyphicon glyphicon-thumbs-up" style="margin:10px;color:white;" id="color"></span></button>
+								<button type="button" class="btn btn-sm" style="background-color:#039be5;"><span class="glyphicon glyphicon-comment" style="margin:10px;color:white;" onclick="box()"></></span></button>
+								<button type="button" class="btn btn-sm" style="background-color:#039be5;"><span class="glyphicon glyphicon-share-alt" style="margin:10px;color:white;" onclick="printtweet()"></span></button>
+							</ul>
+						</div>
+					</div>
+				</div>
+					</div><!--print tweet-->
+				</div><!--end8-->
+				
+				
+				<div class="col-sm-2"></div><!--end2-->
+			</div><!--end row-->
+		</div><!--end container-->
+		<!--profile end-->
+		
+		
+		<!--loginmodal-->
+		<div class="modal fade" id="tweet" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-keyboard="false" data-backdrop="static">
+		  <div class="modal-dialog modal-sm" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">New Tweet</h4>
+			  </div><!--end modal header-->
+			 
+
+			 <div class="modal-body">
+				<div class="form-group">
+					<textarea class="form-control" placeholder="What's happening?" id="tweettext"></textarea>
+				</div>
+			</div><!--end modalbody-->
+			  
+			  <div class="modal-footer">
+				<button type="submit" class="btn"style="background-color:#039be5;color:white;" onclick="printtweet()" data-dismiss="modal"> Tweet</button>
+				<br>
+				
+			  </div><!--end modalfooter-->
+			
+		  </div><!--end modal-content-->
+		</div><!--end modal-dialog-->
+		</div><!--end modalfade-->
+		
+	
+	</body>
+</html>

@@ -1,0 +1,242 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="dist/css/bootstrap.css">
+		<script src="dist/js/jquery.min.js"></script>
+		<script src="dist/js/bootstrap.js"></script>
+		<style>
+			#btn1{
+				background-color:#039be5; 
+				height:30px; 
+				width:300px; 
+				font-weight:bold; 
+				color:white;
+			}
+			
+			#btn2{
+				background-color:white;
+				height:30px; 
+				width:300px;
+				border:1px solid #039be5;
+				font-weight:bold;
+			}
+			
+			#footer{
+				margin-top:px;
+				background-color:lightgrey;
+				height:50px;
+			}
+			#footer ul li{
+				display:inline;
+				margin:15px;
+				
+				
+			}
+			
+			
+			p{
+				font-weight:bold;
+				margin-top:10px;
+				font-size:20px;
+			}
+			
+			
+			.glyphicon glyphicon-plus-sign{
+				margin-left:-5px;
+			}
+			
+			#p1{
+				margin-left:200px;
+			}
+			
+			#p1:hover{
+				text-shadow:1px 2px 3px darkblue;
+			}
+			
+			#p2{
+				margin-left:200px;
+			}
+			
+			#p2:hover{
+				text-shadow:1px 2px 3px darkblue;
+			}
+			
+			#p3{
+				margin-left:200px;
+			}
+			
+			#p3:hover{
+				text-shadow:1px 2px 3px darkblue;
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-6" style="background-color:#039be5; height:700px;">
+				
+					<p class="text-center" style="font-size:100px; color:white;margin-top:50px; text-shadow: 2px 2px 4px #000000;">Twitter<p>
+					
+					<br><br>
+					
+						<p id="p1"><span class="glyphicon glyphicon-search" style="color:white;"> SearchFollow your interests</span><p>
+				
+					<br>
+					
+						<p id="p2"><span class="glyphicon glyphicon-user" style="color:white;"> Hear what people are talking about</span><p>
+					
+					<br>
+					 
+						<p id="p3"><span class="glyphicon glyphicon-plus-sign" style="color:white;"> Join the conversation</span></p>
+				
+				</div><!--end6-->
+				
+				<!--signup-->
+				
+				<div class="col-sm-6" >
+				<br>
+					<div class="col-sm-2"></div>
+					<div class="col-sm-4">
+						<input type="text" name="cname" class="form-control" placeholder="Name/Email">
+					</div><!--end 4-->
+					
+					<div class="col-sm-4">
+						<input type="password" name="cpassword" class="form-control" placeholder="password">
+						<a href="forgotpassword.html">Forgot password?</a>
+						
+					</div><!--end 4-->
+					<div class="col-sm-2">
+						<button class="btn btn-sm" style="background-color:#039be5"><a href="loginpage.html" style="color:white;"> Log In </a></button>
+					</div>
+					
+					
+					<h3 style="font-weight:bold;margin-top:300px;" class="text-center"> See what is happening in</h3>
+					<h4 style="font-weight:bold;" class="text-center"> the world right now </h4>
+					
+					<br><br>
+					
+					<h4 class="text-center"> Join twitter today </h4>
+					<div class="text-center">
+					<button class="btn" id="btn1" type="submit"><a href="#" data-toggle="modal" data-target="#myModal" style="color:white;"> Sign Up </a></button>
+					<br><br>
+					<button class="btn" id="btn2" type="submit"><a href="#" data-toggle="modal" data-target="#login"> Log In </a></button>
+					</div>
+					
+				</div><!--end 6-->
+				
+			
+			</div><!--end row-->
+			<!--<div class="container-fluid">-->
+			<div class="row">
+			<div class="text-center" id="footer">
+				<ul>
+				
+					<li><a href="about.html">About</a></li>
+					<li><a href="#">Helpcenter</a></li>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">Status</a></li>
+					<li><a href="#">Jobs</a></li>
+					<li><a href="#">Terms</a></li>
+					<li><a href="#">PrivacyPolicy</a></li>
+					<li><a href="#">Cookies</a></li>
+					<li><a href="#">Adsinfo</a></li>
+					<li><a href="#">Brand</a></li>
+					<li><a href="#">Apps</a></li>
+					<li><a href="#">Advertise</a></li>
+					<li><a href="#">Marketing</a></li>
+					<li><a href="#">Business</a></li>
+					<li><a href="#">Developers</a></li>
+					<li><a href="#">Directory</a></li>
+				</ul>
+			</div>
+			</div>
+		</div><!--end container-->
+		
+		
+		<!--modal signup-->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-keyboard="false" data-backdrop="static" >
+		  <div class="modal-dialog modal-md" role="document">
+			<div class="modal-content" >
+			  <div class="modal-header" style="background-color:#039be5;">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title text-center" id="myModalLabel" style="color:white; font-size:20px; font-weight:bold;">Sign Up</h4>
+			  </div>
+			  <div class="modal-body">
+				
+						
+							<div class="form-group">
+								<label> Name </label>
+								<input type="text" class="form-control" placeholder="Name" name="cname">
+							</div><!--end4-->
+						
+						
+						
+							<div class="form-group">
+								<label> mobile </label>
+								<input type="tel" class="form-control" placeholder="Mobile" name="cmob">
+							</div><!--end4-->
+						
+							
+							<div class="form-group">
+								<label> Email </label>
+								<input type="email" class="form-control" placeholder="Email" name="email">
+							</div><!--end6-->
+							
+							
+							
+							<div class="form-group">
+								<label> Password </label>
+								<input type="password" class="form-control" placeholder="Password" name="password">
+							</div><!--end6-->
+							
+				</div>
+			  <div class="modal-footer" style="background-color:#039be5;">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="submit" class="btn btn-primary"  data-dismiss="modal">Submit</button>
+				
+				
+			  </div>
+			</div>
+		  </div>
+		</div>
+		
+		
+		<!--loginmodal-->
+		<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-keyboard="false" data-backdrop="static">
+		  <div class="modal-dialog modal-sm" role="document">
+			<div class="modal-content">
+			  <div class="modal-header" style="background-color:#039be5;">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Login</h4>
+			  </div>
+			 
+
+			 <div class="modal-body">
+				<div class="form-group">
+					<label> Name/Email </label>
+					<input type="text" class="form-control" placeholder="Name or email">
+				</div>
+						
+				<div class="form-group">
+					<label> Password </label>
+					<input type="password" class="form-control" placeholder="password">
+				</div>
+				
+				
+				
+			  </div>
+
+			  
+			  <div class="modal-footer"  style="background-color:#039be5;">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary"><a href="loginpage.html" style="color:white;">Login </a></button>
+				<br>
+				
+			  </div>
+			</div>
+		  </div>
+		</div>
+	</body>
+</html>
